@@ -1,0 +1,45 @@
+#container {
+    text-align: center;
+    padding: 50px;
+
+    table {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    td {
+        width: 50%;
+        border: 1px solid #fff;
+        padding: 10px;
+    }
+}
+
+a {
+    position: relative;
+    color: #fff;
+    -webkit-transition: 0.25s all;
+    -o-transition: 0.25s all;
+    transition: 0.25s all;
+}
+
+a::after {
+    content: '';
+    position: absolute;
+}
+
+a:hover {
+    color: #88b;
+}
+
+@media only screen and (max-width: 700px) {
+    #container {
+        padding: 50px 0!important;
+        table {
+            width: 80%!important;
+
+            td {
+                width: auto!important;  
+            }
+        }
+    }
+}

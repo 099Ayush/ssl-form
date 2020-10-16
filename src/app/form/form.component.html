@@ -1,0 +1,57 @@
+<form id="mainform" action="" [formGroup]="form" novalidate (ngSubmit)="submitForm()">
+
+    <div class="form-row">
+        <label for="name">Name</label>
+        <input id="name" type="text" formControlName="name" spellcheck="false">
+    </div>
+    <div class="form-row">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" spellcheck="false">
+    </div>
+    <div class="form-row2">
+        <div id="container">
+            <label for="feedback">Feedback</label>
+            <div id="container2">
+                <input id="great" type="radio" name="feedback" value="Great" formControlName="feedback">
+                <label for="great">Great</label>
+                <input id="okay" type="radio" name="feedback" value="Okay" formControlName="feedback">
+                <label for="okay">Okay</label>
+                <input id="ngood" type="radio" name="feedback" value="Not good" formControlName="feedback">
+                <label for="ngood">Not good</label>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <label for="comment">Comment</label>
+        <textarea id="comment" rows=5 formControlName="comment" spellcheck="true"></textarea>
+    </div>
+
+    <div class="form-row">
+        <input id="submit" value="Submit" type="submit">
+    </div>
+</form>
+
+<div id="value">
+    <div class="title">Form Value (JSON)</div>
+    <div id="json">
+        <pre id="sub">
+{{ form.value | json }}
+        </pre>
+    </div>
+</div>
+<div id="cover">
+    <div class="popup" id="success">
+        <div class="title">Success</div>
+        <p class="desc">
+            Submitted the query successfully. Resetting the form to the initial values.
+        </p>
+    </div>
+
+    <div class="popup" id="error">
+        <div class="title">Error</div>
+        <p class="desc">
+            An error encountered while submitting the query. Please check your network and for the validity of the
+            information.
+        </p>
+    </div>
+</div>
